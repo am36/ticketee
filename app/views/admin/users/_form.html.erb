@@ -1,0 +1,28 @@
+<%= form_for([:admin,user]) do |f| %>
+<p>
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+</p>
+  <p>
+    <%= f.label :password %><br>
+    <%= f.text_field :password %>
+</p>
+<header>
+            <h2>Roles</h2>
+</header>
+<table class="roles">
+            <% projects.each do |project| %>
+              <tr>
+                <th><%= label_tag dom_id(project), project.name %></th>
+                <td>
+                  <%= select_tag dom_id(project), options_for_select(roles,
+                    user.role_on(project)), name: "roles[#{project.id}]",
+                    include_blank: true %>
+                </td>
+              </tr>
+            <% end %>
+</table>
+<%= f.label :"Is an admin?" %>
+<%= f.check_box :admin%>
+  <%= f.submit %>
+<% end %>
