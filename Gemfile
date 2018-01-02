@@ -30,6 +30,8 @@ gem "carrierwave", "~> 0.10.0"
 gem 'simple_form'
 gem "searcher", github: "radar/searcher"
 gem "fog", "~> 1.29.0"
+gem "pg", group: :production
+gem "rails_12factor", group: :production
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
