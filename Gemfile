@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # Use sqlite3 as the database for Active Record
@@ -24,16 +25,16 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem "bootstrap-sass", "~> 3.3"
 gem "font-awesome-rails", "~> 4.3"
-gem "devise", "~> 3.4.1"
+gem "devise","~> 3.4.1"
 gem "pundit", "~> 0.3.0"
 gem "carrierwave", "~> 0.10.0"
 gem 'simple_form'
 gem "searcher", github: "radar/searcher"
-gem "fog", "~> 1.29.0"
+gem "fog", "~> 1.36.0"
 gem "pg", group: :production
 gem "rails_12factor", group: :production
 gem "puma", group: :production
-
+gem 'net-ssh'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
