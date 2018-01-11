@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'static_pages/welcome'
+
   namespace :admin do
    get 'users/index'
   end
@@ -93,6 +95,8 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
   
-  
-  root "projects#index"
+  authenticated do
+    root 'projects#index', as: :authenticated
+  end
+  root "static_pages#welcome"
 end
