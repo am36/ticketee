@@ -1,5 +1,5 @@
 
-  <div class="page-header">
+  <header>
   <h1>Projects</h1>
   <% admins_only do %>
   <ul class="actions">
@@ -7,9 +7,10 @@
       class: "btn btn-success" %>
       </ul>
 <% end %>
-</div>
+ </header>
 
         <div id="projects">
+           
           <% @projects.each do |project| %>
             <h2><%= link_to project.name, project %></h2>
             <p><%= project.description %></p>
