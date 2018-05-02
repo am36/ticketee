@@ -23,13 +23,19 @@ Rails.application.routes.draw do
 
 
   devise_for :users
-    resources :projects, only: [:index, :show, :edit, :update] do
-      resources :tickets do
-        collection do
-          get :search
-        end
+  root "projects#index"
+
+  resources :projects, only: [:index, :show, :edit, :update] do
+    resources :tickets do
+      collection do
+        get :search
+      end
+
+      member do
+        post :watch
       end
     end
+  end
    resources :tickets, only: [] do
     resources :comments, only: [:create]
     resources :tags, only: [] do
