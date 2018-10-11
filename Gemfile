@@ -31,7 +31,7 @@ gem "carrierwave", "~> 0.10.0"
 gem 'simple_form'
 gem "searcher", github: "radar/searcher"
 gem "fog", "~> 1.36.0"
-gem "pg"
+gem "pg", "~> 0.21.0"
 gem "rails_12factor", group: :production
 gem "puma", group: :production
 gem 'net-ssh'
