@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   
 
   devise_for :users
-  root "projects#index"
+  root "static_pages#welcome"
 
   resources :projects, only: [:index, :show, :edit, :update] do
     resources :tickets do

@@ -42,7 +42,7 @@ data-toggle="collapse" data-target="#collapse">
 <li class="<%= "active" if current_page?("/") %>">
 <%= link_to "Home", root_path %>
 <% admins_only do %>
-    <li>
+    <li class="<%= "active" if current_page?("/admin") %>">
       <%= link_to "Admin", admin_root_path %>
     </li>
     <%end%>
@@ -53,6 +53,11 @@ data-toggle="collapse" data-target="#collapse">
           <li class="<%= "active" if current_page?("/users/sign_in") %>">
             <%= link_to "Sign in", new_user_session_path %>
           </li>
+<% end %>
+<% if user_signed_in? %>
+    <li class="<%= "active" if current_page?('/projects') %>">
+      <%= link_to "Projects", projects_path %>
+    </li>
 <% end %>
 
 </li>
